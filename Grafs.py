@@ -23,7 +23,7 @@ c, f = str, str
 for j in range(m):
     c, f = input().split()
     if find_path(d, c, f):
-        s.append('Yes')
+        s.append('Yes!!!')
     else:
         s.append('No')
 for h in range(len(s)):
