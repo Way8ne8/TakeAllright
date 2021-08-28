@@ -16,5 +16,5 @@ for i in s:
 for i in s2:
     if i in shifr:
         s3+=str(m1[i])
-print(s1 )
+print(s1)
 print(s3)
