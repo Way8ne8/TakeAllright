@@ -1,16 +1,20 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+#! py
+stroka=input()
+shifr=input()
+s=input()
+s2=input()
+m={}
+m1={}
+s1=''
+s3=''
+for i in range(len(stroka)):
+    m[str((stroka[i]))]=str(shifr[i])
+    m1[(shifr[i])] = stroka[i]
+for i in s:
+    if i in stroka:
+        s1+=str(m[i])
+for i in s2:
+    if i in shifr:
+        s3+=str(m1[i])
+print(s1)
+print(s3)
