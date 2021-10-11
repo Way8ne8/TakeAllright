@@ -24,7 +24,7 @@ birthday2 = '14.09.2017'
 # before = input('Дата вылета по: ')
 for cityId in cityIdLIST.keys():
     link = f'https://search.tez-tour.com/tariffsearch/getResult?priceMin={priceMin}&priceMax={priceMax}&currency={currency}&nightsMin={nightsMin}&nightsMax={nightsMax}&hotelClassId={hotelClasId}&accommodationId={accommodationId}&rAndBId={rAndBId}&tourType=1&locale=ru&cityId={cityId}&countryId={countryId}&after={after}&before={before}&tourId="5734"&tourId="5735"&hotelClassBetter=true&rAndBBetter=true&hotelInStop=false&specialInStop=false&noTicketsTo=false&noTicketsFrom=false&promoFlag=true&version=2&searchTypeId=6&birthday1={birthday1}&birthday2={birthday2}&groupByHotel=2'
-    print(link)
+    #print(link)
     link1 = requests.get(link)
     data = link1.json()
     # print(data)
