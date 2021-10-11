@@ -1,19 +1,24 @@
-n, m = (int(i) for i in input().split())
-a = [input() for j in range(m)]
-k = ['0000']
-a.insert(0, *k)
-a.insert(len(a), *k)
-for i in range(len(a)):
-    a[i] = '0' + a[i] + '0'
-for i in range(n):
-    for j in range(m):
-        if a[i][j] == '*':
+def f(n, x, y):
+    if n > 0:
+        f(n - 1, x, 6 - x - y)
+        print(n, x, y)
+        f(n - 1, 6 - x - y, y)
 
-            a[i-1][j]. = '1'
-            # a[i-1][j] = int(a[i-1][j]) + 1
-            # a[i+1][j] += 1
-            # a[i][j-1] += 1
-            # a[i][j + 1] += 1
-for i in a:
-    print(i)
-print(a)
+
+def sortF(n, x, y):
+    if n > 0:
+        f(n - 1, x, 6 - x - y)
+        print(n, x, y)
+        if n > 3:
+            f(n - 3, 6 - x - y, x)
+        if n > 2:
+            print(n - 2, 6 - x - y, y)
+        if n > 3:
+            sortF(n - 3, x, 6 - x - y)
+
+
+n = int(input())
+if n % 2 == 0:
+    sortF(n, 1, 3)
+else:
+    sortF(n, 1, 2)

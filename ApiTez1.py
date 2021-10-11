@@ -18,7 +18,7 @@ def Albatros(after='01.11.2021', before='12.11.2021'):
     rAndBBetter = 'true'
     regionId = ''
     tourId = '5735'
-    hotelId = '157709'
+    hotelId = '158893'
     birthday1 = '08.08.2012'
     birthday2 = '14.09.2017'
     # after = input("Дата вылета с: ")
@@ -37,8 +37,8 @@ def Albatros(after='01.11.2021', before='12.11.2021'):
     # text1 = ('Дата ' + str(data['data'][0][0]) + 'Цена ' + str(data['data'][0][10]['total']) + '$' + "за " + str(
     #     data['data'][0][3]) + ' ночей')
     text1 = str(data['data'][0][10]['total'])
-    # for i in range(len(data['data'])):
-    #     print(data['data'][i][0], data['data'][i][10]['total']+'$', "за " + str(data['data'][i][3]) + ' ночей')
+    for i in range(len(data['data'])):
+        print(data['data'][i][0], data['data'][i][10]['total']+'$', "за " + str(data['data'][i][3]) + ' ночей')
     return text1
 
 
